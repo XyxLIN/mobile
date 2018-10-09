@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dice</title>
+</head>
+<style>
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+    }
+
+    .face{
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        margin-top: 10px;
+        margin-left:20px;
+    }
+    .Face{
+        box-sizing: border-box;
+        width: 300px;
+        height: 300px;
+        background: -webkit-radial-gradient(#ccc, #888);
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .point {
+        width: 80px;
+        height: 80px;
+        background: -webkit-radial-gradient(rgb(231, 7, 7), rgb(139, 2, 2));
+        border-radius: 50%;
+    }
+
+    .Face:only-child {
+        flex: 2 2 auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Face:nth-of-type(2) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .Face:nth-of-type(3) .point:first-of-type {
+        display: flex;
+        align-self: flex-start;
+
+    }
+
+    .Face:nth-of-type(3) .point:last-of-type {
+        display: flex;
+        align-self: flex-end;
+    }
+
+    .Face:nth-of-type(4) {
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+        align-items: center;
+        
+    }
+    .Face:nth-of-type(4) .face:nth-of-type(1){
+       align-self:flex-start;
+    }
+    .Face:nth-of-type(4) .face .point:last-of-type  {
+        align-self: flex-end;
+    }
+    
+</style>
+
+<body>
+
+    <div class="Face">
+        <div class="point"></div>
+    </div>
+    <hr>
+    <div class="Face">
+        <div class="point"></div>
+        <div class="point"></div>
+    </div>
+    <hr>
+    <div class="Face">
+        <div class="point"></div>
+        <div class="point"></div>
+        <div class="point"></div>
+    </div>
+    <hr>
+
+    <div class="Face">
+        <div class="face">
+            <div class="point"></div>
+            <div class="point"></div>           
+        </div>
+        <div class="face"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+    </div>
+    
+       
+   
+
+</body>
+
+</html>
